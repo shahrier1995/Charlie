@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TSGGCharlieModelStoreContainer" CdmEntityContainer="TSGGCharlieEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CardList">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.tbl_CardList">
+        <MappingFragment StoreEntitySet="tbl_CardList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="User_Status" ColumnName="User_Status" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="WalnutUserIdentifier" ColumnName="WalnutUserIdentifier" />
+          <ScalarProperty Name="WalnutSubscriptionID" ColumnName="WalnutSubscriptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Client">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.tbl_Client">
+        <MappingFragment StoreEntitySet="tbl_Client">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+          <ScalarProperty Name="Invoice_Address" ColumnName="Invoice_Address" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Client_UserName" ColumnName="Client_UserName" />
+          <ScalarProperty Name="Client_EmailAddress" ColumnName="Client_EmailAddress" />
+          <ScalarProperty Name="Client_Folder_Address" ColumnName="Client_Folder_Address" />
+          <ScalarProperty Name="Client_UniqueString" ColumnName="Client_UniqueString" />
+          <ScalarProperty Name="SubscriptionType_ID" ColumnName="SubscriptionType_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Station">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.tbl_Station">
+        <MappingFragment StoreEntitySet="tbl_Station">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Station_Name" ColumnName="Station_Name" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SubscriptionType">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.tbl_SubscriptionType">
+        <MappingFragment StoreEntitySet="tbl_SubscriptionType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Subscription_Name" ColumnName="Subscription_Name" />
+          <ScalarProperty Name="Subscription_Description" ColumnName="Subscription_Description" />
+          <ScalarProperty Name="Subscription_Program" ColumnName="Subscription_Program" />
+          <ScalarProperty Name="Subscription_Price" ColumnName="Subscription_Price" />
+          <ScalarProperty Name="Subscription_Status" ColumnName="Subscription_Status" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Subscription_Recurring_Payment" ColumnName="Subscription_Recurring_Payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Terminal">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.tbl_Terminal">
+        <MappingFragment StoreEntitySet="tbl_Terminal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Terminal_Name" ColumnName="Terminal_Name" />
+          <ScalarProperty Name="Station_ID" ColumnName="Station_ID" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Transaction">
+      <EntityTypeMapping TypeName="TSGGCharlieModel.tbl_Transaction">
+        <MappingFragment StoreEntitySet="tbl_Transaction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="Amount_Spend" ColumnName="Amount_Spend" />
+          <ScalarProperty Name="Transaction_DateTime" ColumnName="Transaction_DateTime" />
+          <ScalarProperty Name="Station_Name" ColumnName="Station_Name" />
+          <ScalarProperty Name="Wash_Program" ColumnName="Wash_Program" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Terminal_ID" ColumnName="Terminal_ID" />
+          <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TSGGCharlieModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TSGGCharlieModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TSGGCharlieModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TSGGCharlieModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TSGGCharlieModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TSGGCharlieModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TSGGCharlieModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TSGGCharlieModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TSGGCharlieModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
