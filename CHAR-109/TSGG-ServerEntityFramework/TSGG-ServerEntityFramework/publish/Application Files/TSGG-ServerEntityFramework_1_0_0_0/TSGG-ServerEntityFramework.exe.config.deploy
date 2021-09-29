@@ -8,8 +8,8 @@
 	  
   </configSections>
 	<connectionStrings>
-		<add name="TSGGCharlieEntities" connectionString="metadata=res://*/DBModel.csdl|res://*/DBModel.ssdl|res://*/DBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=88.218.53.42,1433;initial catalog=TSGGCharlie;persist security info=True;user id=sa;password=P@$$w0rd;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
-		<add name="TSGGEntities" connectionString="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=88.218.53.42,1433;initial catalog=TSGGCharlie;persist security info=True;user id=sa;password=P@$$w0rd;multipleactiveresultsets=True;application name=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+		<add name="TSGGCharlieEntities" connectionString="metadata=res://*/DBModel.csdl|res://*/DBModel.ssdl|res://*/DBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=IP_removed_for_security_purpose;initial catalog=TSGGCharlie;persist security info=True;user id=sa;password=passowrd;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+		<add name="TSGGEntities" connectionString="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=IP_removed_for_security_purpose,1433;initial catalog=TSGGCharlie;persist security info=True;user id=sa;password=passowrd;multipleactiveresultsets=True;application name=EntityFramework&quot;" providerName="System.Data.EntityClient" />
 
 	</connectionStrings>
   <startup>
